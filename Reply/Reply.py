@@ -10,7 +10,7 @@ class Rely(commands.Cog):
         if message.author.bot:
             return
 
-        if  message.content.lower() == "+check":
+        if  message.content.lower() == "check":
             await message.channel.send("Please use commands in <#{690744388623663144}> Thank you!")
         elif message.content.lower() == "+f":
             await message.channel.send("Please use commands in <#{690744388623663144}> Thank you!")
