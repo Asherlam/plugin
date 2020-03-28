@@ -10,7 +10,7 @@ class Rely(commands.Cog):
         if message.author.bot:
             return
         
-        list = ("+check", "+bal", "+f")
+        list = ('+check', '+f', '+bal', '+invite', '+info', '+act', '+pay')
         if message.content in list:
 
         	if message.channel.id != 690744388623663144:
