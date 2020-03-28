@@ -11,11 +11,13 @@ class Rely(commands.Cog):
             return
 
         channel = message.channel
-        list = ['check', 'f', 'bal', 'invite', 'info', 'act', 'pay']
+        keyword = ['+check', '+f', '+bal', '+invite', '+info', '+act', '+pay']
 
-        if message.content in list:
+        if message.content in keyword:
 
-        	await channel.send("Please use commands in <#{690744388623663144}> Thank you!")
+            if message.channel.id != 690744388623663144:
+
+        	   await channel.send("Please use commands in <#{690744388623663144}> Thank you!")
 
 
 
