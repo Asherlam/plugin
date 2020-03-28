@@ -29,23 +29,32 @@ class Rely(commands.Cog):
         elif message.content.lower() == "hi":
             await message.channel.send("Hi")
         elif  message.content.lower() == "+check":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+f":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+pay":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+find":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+buy":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+invite":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+bal":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+purchase":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+info":
-            await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+            if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
 
 
 def setup(bot):
