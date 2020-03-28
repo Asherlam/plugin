@@ -12,11 +12,13 @@ class Rely(commands.Cog):
 
         botcommand = discord.utils.get(guild.textchannel, id=690744388623663144)
 
-        if message.content.lower() == "+check":
+        list = ("check", "bal", "f")
+        if message.contect.startswith('+')
+            if message.content.lower() in list:
 
-        	if message.channel != botcommand:
+        	   if message.channel != botcommand:
 
-        		await message.send("Please use commands in <#{690744388623663144}> Thank you!")
+        		  await message.send("Please use commands in <#{690744388623663144}> Thank you!")
 
 
 
