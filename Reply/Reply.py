@@ -60,8 +60,12 @@ class Rely(commands.Cog):
 
     @commands.command()
     @checks.has_permissions(PermissionLevel.MODERATOR)
-    async def dm(self, ctx, user: discord.Member, *, arg):
-        if not user:
+    async def dm(self, ctx, member: discord.Member, *, arg):
+        """Dm member in the guild.
+        Usage:
+        {prefix}dm @member Nice guy
+        """
+        if member is None:
             return await ctx.send("Please specify a user")
 
         dmchannel = await user.create_dm()
