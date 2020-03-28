@@ -16,7 +16,7 @@ class Rely(commands.Cog):
         if message.content.startswith('+'):
             if message.content.lower() in list:
 
-        	   if message.channel != botcommand:
+        	   if message.channel != 690744388623663144:
 
         		  await message.send("Please use commands in <#{690744388623663144}> Thank you!")
 
