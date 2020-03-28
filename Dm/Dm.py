@@ -9,7 +9,7 @@ class Dm(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    @checks.has_permissions(PermissionLevel.MODERATOR)
+    @checks.has_permissions(PermissionLevel.OWNER)
     async def dm(self, ctx, member: discord.Member, *,arg):
         """Dm member in the guild.
         Usage:
