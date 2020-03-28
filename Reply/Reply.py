@@ -11,7 +11,7 @@ class Rely(commands.Cog):
             return
         
         list = ('+check', '+f', '+bal', '+invite', '+info', '+act', '+pay')
-        if message.content in list:
+        if message.content.lower() in list:
 
         	if message.channel.id != 690744388623663144:
 
