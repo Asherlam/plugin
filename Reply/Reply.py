@@ -54,7 +54,15 @@ class Rely(commands.Cog):
                 await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+info":
             if message.channel.id != 690744388623663144:
-                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
+
+    @commands.command()
+    async def dm(self, ctx, user: discord.Member, *, arg):
+        if not user:
+            return await ctx.send("Please specify a user")
+
+        dmchannel = await user.create_dm()
+        await dmchannel.send(f'arg')
+
 
 
 def setup(bot):
