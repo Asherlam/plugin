@@ -19,7 +19,7 @@ class Dm(commands.Cog):
             return await ctx.send("Please specify a user")
 
         dmchannel = await member.create_dm()
-        await dmchannel.send(f'arg')
+        await dmchannel.send(f'{arg}')
 
 def setup(bot):
 	bot.add_cog(Dm(bot))
