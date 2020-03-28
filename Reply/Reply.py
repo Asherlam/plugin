@@ -14,9 +14,9 @@ class Rely(commands.Cog):
 
         if message.content.lower() == "+check":
 
-        	if ctx.message.channel != 690744388623663144:
+        	if message.channel != 690744388623663144:
 
-        		await ctx.send("Please use commands in <#{690744388623663144}> Thank you!")
+        		await message.send("Please use commands in <#{690744388623663144}> Thank you!")
 
 
 
