@@ -8,7 +8,6 @@ class Rely(commands.Cog):
         self.bot = bot
 
     @commands.Cog.listener()
-    @checks.has_permissions(PermissionLevel.MODERATOR)
     async def on_message(self, message):
 
         if message.author.bot:
@@ -60,6 +59,7 @@ class Rely(commands.Cog):
             if message.channel.id != 690744388623663144:
 
     @commands.command()
+    @checks.has_permissions(PermissionLevel.MODERATOR)
     async def dm(self, ctx, user: discord.Member, *, arg):
         if not user:
             return await ctx.send("Please specify a user")
