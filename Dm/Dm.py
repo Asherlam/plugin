@@ -18,7 +18,7 @@ class Dm(commands.Cog):
         if member is None:
             return await ctx.send("Please specify a user")
 
-        dmchannel = await user.create_dm()
+        dmchannel = await member.create_dm()
         await dmchannel.send(f'arg')
 
 def setup(bot):
