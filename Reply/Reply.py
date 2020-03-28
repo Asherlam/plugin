@@ -10,14 +10,12 @@ class Rely(commands.Cog):
         if message.author.bot:
             return
         
-        if message.content.startswith('+'):
+        list = ("+check", "+bal", "+f")
+        if message.content in list:
 
-            list = ("check", "bal", "f")
-            if message.content in list:
+        	if message.channel.id != 690744388623663144:
 
-        	    if message.channel.id != 690744388623663144:
-
-        		    await message.channel.send("Please use commands in <#{690744388623663144}> Thank you!")
+        		await message.channel.send("Please use commands in <#{690744388623663144}> Thank you!")
 
 
 
