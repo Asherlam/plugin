@@ -5,17 +5,19 @@ class Rely(commands.Cog):
         self.bot = bot
 
     @commands.Cog.listener()
-    async def on_message(self, message):
+    async def on_command(self, message):
         
         if message.author.bot:
             return
-        
-        list = ['+check', '+f', '+bal', '+invite', '+info', '+act', '+pay']
+
+        channel = message.channel
+        list = ['check', 'f', 'bal', 'invite', 'info', 'act', 'pay']
+
         if message.content in list:
 
-        	if message.channel.id != 690744388623663144:
+        	
 
-        		await message.channel.send("Please use commands in <#{690744388623663144}> Thank you!")
+        		await channel.send("Please use commands in <#{690744388623663144}> Thank you!")
 
 
 
