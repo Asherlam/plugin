@@ -15,7 +15,7 @@ class Rely(commands.Cog):
             list = ("check", "bal", "f")
             if message.content in list:
 
-        	   if message.channel != 690744388623663144:
+        	   if message.channel_id != 685799034312851456:
 
         		  await message.channel.send("Please use commands in <#{690744388623663144}> Thank you!")
 
