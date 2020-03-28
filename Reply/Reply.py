@@ -1,6 +1,5 @@
 from discord.ext import commands
 
-
 class Reply(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -55,6 +54,7 @@ class Reply(commands.Cog):
                 await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
         elif message.content.lower() == "+info":
             if message.channel.id != 690744388623663144:
+                await message.channel.send("Please use commands in <#690744388623663144> Thank you!")
 
 def setup(bot):
     bot.add_cog(Reply(bot))
