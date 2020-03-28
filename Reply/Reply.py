@@ -13,7 +13,7 @@ class Rely(commands.Cog):
         botcommand = discord.utils.get(guild.textchannel, id=690744388623663144)
 
         list = ("check", "bal", "f")
-        if message.contect.startswith('+'):
+        if message.content.startswith('+'):
             if message.content.lower() in list:
 
         	   if message.channel != botcommand:
