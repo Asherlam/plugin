@@ -15,9 +15,7 @@ class Rely(commands.Cog):
 
         if message.content in list:
 
-        	
-
-        		await channel.send("Please use commands in <#{690744388623663144}> Thank you!")
+        	await channel.send("Please use commands in <#{690744388623663144}> Thank you!")
 
 
 
