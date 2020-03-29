@@ -5,7 +5,7 @@ import random
 import datetime
 import asyncio
 
-with open('pic.json', 'r', encoding='utf8') as data:
+with open('Asherlam/plugin/nsfw/pic.json', 'r', encoding='utf8') as data:
     pdata = json.load(data)
 
 class Nsfw(commands.Cog):
