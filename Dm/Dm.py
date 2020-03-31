@@ -37,7 +37,7 @@ class Dm(commands.Cog):
             await ctx.message.delete()
             await reactionid.delete()
                 
-            dmchannel = await member.create_dm()
+            dmchannel = await user.create_dm()
             await dmchannel.send(f"{arg}")
 
 def setup(bot):
