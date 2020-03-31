@@ -39,6 +39,7 @@ class Dm(commands.Cog):
                 
             dmchannel = await user.create_dm()
             await dmchannel.send(f"{arg}")
+            await ctx.send("DM'd")
 
 def setup(bot):
 	bot.add_cog(Dm(bot))
