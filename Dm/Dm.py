@@ -10,16 +10,34 @@ class Dm(commands.Cog):
 
     @commands.command()
     @checks.has_permissions(PermissionLevel.OWNER)
-    async def dm(self, ctx, member: discord.Member, *,arg):
-        """Dm member in the guild.
+    async def dm(self, ctx, user: discord.Member, *,arg):
+        """Dm user in the guild.
         Usage:
-        {prefix}dm @member Nice guy
+        {prefix}dm @user Nice guy
         """
-        if member is None:
+        if not user:
             return await ctx.send("Please specify a user")
 
-        dmchannel = await member.create_dm()
-        await dmchannel.send(f"{arg}")
+            embed=discord.Embed(description=f"You Are Sure To Send Direct Message To **{user.name}**?", color=0xff0000)
+            embed.add_field(name="User Info", value=f"Name: `{user}`\n ID: `{user.id}`\n Message: `{arg}`", inline=False)
+            embed.set_thumbnail(url=user.avatar_url)
+            reactionid = await ctx.send(embed=embed)
+            await reactionid.add_reaction('✅')
+
+            def check(reaction, user):
+              return user == ctx.author and str(reaction.emoji) == '✅'
+
+            try:
+                reaction, ctx.author = await self.bot.wait_for('reaction_add', timeout=20.0, check=check)
+            except asyncio.TimeoutError:
+                await ctx.message.delete()
+                await reactionid.delete()
+            else:
+                await ctx.message.delete()
+                await reactionid.delete()
+                
+                dmchannel = await member.create_dm()
+                await dmchannel.send(f"{arg}")
 
 def setup(bot):
 	bot.add_cog(Dm(bot))
