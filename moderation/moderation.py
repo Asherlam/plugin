@@ -21,7 +21,7 @@ class ModerationPlugin(commands.Cog):
         self.db = bot.plugin_db.get_partition(self)
 
     @commands.command()
-    @checks.has_permissions(PermissionLevel.Supporter)
+    @checks.has_permissions(PermissionLevel.SUPPORTER)
     async def cls(self, ctx):
         if ctx.message.channel.category_id != 685799034312851456:
             await ctx.channel.purge(limit=100000000)
@@ -29,7 +29,7 @@ class ModerationPlugin(commands.Cog):
             await ctx.message.delete()
 
     @commands.command()
-    @checks.has_permissions(PermissionLevel.Supporter)
+    @checks.has_permissions(PermissionLevel.SUPPORTER)
     async def clean(self, ctx, num : int):
         if ctx.message.channel.category_id != 685799034312851456:
             await ctx.channel.purge(limit=num+1)
@@ -37,7 +37,7 @@ class ModerationPlugin(commands.Cog):
             await ctx.message.delete()
 
     @commands.command()
-    @checks.has_permissions(PermissionLevel.Supporter)
+    @checks.has_permissions(PermissionLevel.SUPPORTER)
     async def cleanuser(self, ctx, limit: int, target: discord.User = None):
         if ctx.message.channel.category_id != 685799034312851456:
             check = (lambda message: message.author.id == target.id)
