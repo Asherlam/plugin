@@ -1,13 +1,9 @@
-import discord
-from discord.ext import commands
 import requests
 import urllib
 import json
 import math
 from bs4 import BeautifulSoup
 import asyncio
-from core import checks
-from core.models import PermissionLevel
 
 
 class PornHub:
