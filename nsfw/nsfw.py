@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import asyncio
 
 
-class PornHub:
+class PornHub(commands.Cog):
 
     categories = [
         ["60fps", "video?c=105"],
