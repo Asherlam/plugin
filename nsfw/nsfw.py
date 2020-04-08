@@ -1,3 +1,4 @@
+import discord
 import requests
 import urllib
 import json
